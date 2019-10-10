@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minesweeper game</title>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body onload="initGame()">
+    <header>
+        <h1>Minesweeper</h1>
+    </header>
+    <div class="level">
+        <h3 onclick="getLevel(4)">Level-1</h3>
+        <h3 onclick="getLevel(8)">Level-2</h3>
+        <h3 onclick="getLevel(12)">Level-3</h3>
+    </div>
+    <div class="modal">
+        <button onclick="initGame()">Reset Game</button>
+        <h3>Easy (Kal)</h3>
+    </div>
+    <div class="details">
+        <span>Timer: <span class="timer">0</span></span>
+        <span class="safe" onclick="safeClicked()">Safe Click: <span>3</span></span>
+            <span>Live: <span class="live">3</span></span>
+            <br>
+            <span class="bestscore"></span>
+    </div>
+    <div class="game"></div>
+    <script src="js/util.js"></script>
+    <!-- <script src="js/pacman.js"></script> -->
+    <script src="js/mines.js"></script>
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>
